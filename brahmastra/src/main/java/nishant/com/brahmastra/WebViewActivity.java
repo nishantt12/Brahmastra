@@ -6,12 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 /**
  * Created by nishant on 15/9/16.
@@ -33,14 +30,16 @@ public class WebViewActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         String url = intent.getStringExtra("url");
-
-        Log.e(TAG, url + "jkkbk");
+        String title = intent.getStringExtra("title");
 
         WebView webView = (WebView) findViewById(R.id.webview);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        toolbar.setTitle("Web");
+        if (title != null) {
+            toolbar.setTitle(title);
+        }
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -52,12 +51,12 @@ public class WebViewActivity extends AppCompatActivity {
             }
         });
 
-        progressBar = ProgressDialog.show(this, "WebView", "Loading...");
+        progressBar = ProgressDialog.show(this, "", "Loading...");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient() {
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -66,13 +65,14 @@ public class WebViewActivity extends AppCompatActivity {
 
                 return true;
             }
+
             @Override
             public void onPageFinished(WebView view, final String url) {
                 progressBar.dismiss();
             }
         });
 
-        Toast.makeText(this,  url, Toast.LENGTH_LONG).show();
+//        Toast.makeText(this,  url, Toast.LENGTH_LONG).show();
 
         webView.loadUrl(url);
 

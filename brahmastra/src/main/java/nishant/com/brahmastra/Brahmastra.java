@@ -10,7 +10,7 @@ import android.util.Log;
 public class Brahmastra {
 
 
-    public static void openWeb(Activity activity, String url) {
+    public static void openWeb(Activity activity, String url, String title) {
 
         Intent intent = new Intent(activity, WebViewActivity.class);
 
@@ -18,6 +18,7 @@ public class Brahmastra {
         Log.d("d", url);
 
         intent.putExtra("url", url);
+        intent.putExtra("title", title);
 
         activity.startActivity(intent);
 

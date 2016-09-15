@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Brahmastra.openWeb(this, "http://www.google.com");
+        Brahmastra.openWeb(this, "http://www.google.com", "Testing");
 
     }
 }
