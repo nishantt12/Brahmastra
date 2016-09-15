@@ -31,6 +31,7 @@ public class WebViewActivity extends AppCompatActivity {
 
         String url = intent.getStringExtra("url");
         String title = intent.getStringExtra("title");
+        boolean isPdf = intent.getBooleanExtra("isPdf", false);
 
         WebView webView = (WebView) findViewById(R.id.webview);
 
@@ -56,6 +57,7 @@ public class WebViewActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setBuiltInZoomControls(true);
         webView.setWebViewClient(new WebViewClient() {
 
             @Override
@@ -74,8 +76,21 @@ public class WebViewActivity extends AppCompatActivity {
 
 //        Toast.makeText(this,  url, Toast.LENGTH_LONG).show();
 
+        if (isPdf) {
+            loadPdf(url, webView);
+        } else {
+            loadWeb(url, webView);
+        }
+
+
+    }
+
+    private void loadWeb(String url, WebView webView) {
         webView.loadUrl(url);
+    }
 
 
+    private void loadPdf(String url, WebView webView) {
+        webView.loadUrl("https://docs.google.com/gview?embedded=true&url=" + url);
     }
 }
