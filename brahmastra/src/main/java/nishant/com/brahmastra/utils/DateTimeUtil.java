@@ -1,4 +1,4 @@
-package utils;
+package nishant.com.brahmastra.utils;
 
 import org.ocpsoft.prettytime.PrettyTime;
 

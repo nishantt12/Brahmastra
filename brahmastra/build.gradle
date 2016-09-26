@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/nishantt12/Brahmastra'
     gitUrl = 'https://github.com/nishantt12/Brahmastra.git'
 
-    libraryVersion = '1.2.0'
+    libraryVersion = '1.2.2'
 
     developerId = 'nishantt12'
     developerName = 'Nishant Tanwar'

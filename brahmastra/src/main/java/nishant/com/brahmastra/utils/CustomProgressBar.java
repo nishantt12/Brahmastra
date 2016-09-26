@@ -1,4 +1,4 @@
-package utils;
+package nishant.com.brahmastra.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
