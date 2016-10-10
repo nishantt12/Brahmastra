@@ -9,7 +9,7 @@ ext {
     libraryName = 'brahmastra'
     artifact = 'brahmastra'
 
-    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+    libraryDescription = 'A all in library for Android'
 
     siteUrl = 'https://github.com/nishantt12/Brahmastra'
     gitUrl = 'https://github.com/nishantt12/Brahmastra.git'
