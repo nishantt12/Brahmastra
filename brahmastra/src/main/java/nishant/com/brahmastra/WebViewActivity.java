@@ -54,43 +54,10 @@ public class WebViewActivity extends AppCompatActivity {
 
         progressBar = ProgressDialog.show(this, "", "Loading...");
 
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.setWebViewClient(new WebViewClient() {
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                progressBar.show();
-                view.loadUrl(url);
-
-                return true;
-            }
-
-            @Override
-            public void onPageFinished(WebView view, final String url) {
-                progressBar.dismiss();
-            }
-        });
-
-//        Toast.makeText(this,  url, Toast.LENGTH_LONG).show();
-
-        if (isPdf) {
-            loadPdf(url, webView);
-        } else {
-            loadWeb(url, webView);
-        }
+        WebviewPresenter.setupWebView(url, isPdf, webView, progressBar);
 
 
     }
 
-    private void loadWeb(String url, WebView webView) {
-        webView.loadUrl(url);
-    }
 
-
-    private void loadPdf(String url, WebView webView) {
-        webView.loadUrl("https://docs.google.com/gview?embedded=true&url=" + url);
-    }
 }

@@ -2,6 +2,8 @@ package nishant.com.brahmastra;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 /**
@@ -36,6 +38,23 @@ public class Brahmastra {
         intent.putExtra("title", title);
 
         activity.startActivity(intent);
+
+    }
+
+    public static void openPdfFragment(int layoutId, AppCompatActivity context, String url, String title) {
+        Log.e("d", url);
+
+        Bundle bundle = new Bundle();
+
+        bundle.putString("url", url);
+        bundle.putString("title", title);
+        bundle.putBoolean("isPdf", true);
+
+
+        ManageFragments manageFragments = new ManageFragments();
+
+        manageFragments.showFragmentNoEnter(context, layoutId, false, false, new WebviewFragment(), "", bundle);
+
 
     }
 
