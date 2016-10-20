@@ -2,11 +2,9 @@ package nishant.com.brahmastra;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +32,7 @@ public class WebviewFragment extends Fragment {
         Bundle bundle = getArguments();
 
         String url = bundle.getString("url");
-        String title = bundle.getString("title");
+//        String title = bundle.getString("title");
         boolean isPdf = bundle.getBoolean("isPdf", false);
 
         WebView webView = (WebView) view.findViewById(R.id.webview);

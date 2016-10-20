@@ -41,13 +41,12 @@ public class Brahmastra {
 
     }
 
-    public static void openPdfFragment(int layoutId, AppCompatActivity context, String url, String title) {
+    public static void openPdfFragment(int layoutId, AppCompatActivity context, String url) {
         Log.e("d", url);
 
         Bundle bundle = new Bundle();
 
         bundle.putString("url", url);
-        bundle.putString("title", title);
         bundle.putBoolean("isPdf", true);
 
 
