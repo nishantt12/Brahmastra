@@ -29,7 +29,6 @@ public class BasicUtils {
         return shareUrl;
     }
 
-
     public static void getShareActions(Context context, String text) {
 
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -203,7 +202,6 @@ public class BasicUtils {
         } catch (Exception ex) { } // for now eat exceptions
         return "";
     }
-
 
 
 }

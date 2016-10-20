@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#690004</color>
+    <color name="colorPrimaryDark">#490004</color>
+    <color name="colorAccent">#608142</color>
+
+    <color name="half_black">#808080</color>
+    <color name="black_25">#BFBFBF</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="leads_back">#f0f5f8</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="colorGrayDark">#4c4c4c</color>
+    <color name="btnNextColor">#fe5457</color>
+    <color name="grey">#808080</color>
+    <color name="booking_grey">#f2f2f2</color>
+    <color name="booking_grey2">#aaaaaa</color>
+
+    <color name="color_tab_1">#455C65</color>
+    <color name="color_tab_2">#00886A</color>
+    <color name="color_tab_3">#8B6B62</color>
+    <color name="color_tab_4">#6C4A42</color>
+    <color name="color_tab_5">#F63D2B</color>
+    <color name="enter">#e1cca4</color>
+    <color name="home_news">#5b3c3d</color>
+    <color name="home_booking">#d2b3b4</color>
+    <color name="home_view_all">#977778</color>
+
+
+
+
+</resources>
