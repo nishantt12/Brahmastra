@@ -9,6 +9,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nishant.brahmastra.main.MainActivity">
 
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/frame_layout"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

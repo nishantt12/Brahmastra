@@ -12,7 +12,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Brahmastra.openPdf(this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf", "Testing");
+//        Brahmastra.openPdf(this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf", "Testing");
+
+        Brahmastra.openPdfFragment(R.id.frame_layout, this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf");
+
 
     }
 }
