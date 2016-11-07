@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 public class WebviewPresenter {
 
 
-    public static void setupWebView(String url, boolean isPdf, WebView webView, final ProgressDialog progressBar) {
+    public static void setupWebView(String url, boolean isPdf, WebView webView, final ProgressDialog progressBar, final boolean isProgress) {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
@@ -21,7 +21,10 @@ public class WebviewPresenter {
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                progressBar.show();
+                if (isProgress) {
+                    progressBar.show();
+                }
+
                 view.loadUrl(url);
 
                 return true;
@@ -29,7 +32,11 @@ public class WebviewPresenter {
 
             @Override
             public void onPageFinished(WebView view, final String url) {
-                progressBar.dismiss();
+
+                if (progressBar.isShowing()) {
+                    progressBar.dismiss();
+                }
+
             }
         });
 

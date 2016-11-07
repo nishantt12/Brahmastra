@@ -33,6 +33,9 @@ public class WebViewActivity extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         boolean isPdf = intent.getBooleanExtra("isPdf", false);
 
+        boolean isProgress = intent.getBooleanExtra("isProgress", false);
+        boolean isCancelAble = intent.getBooleanExtra("isCancelAble", false);
+
         WebView webView = (WebView) findViewById(R.id.webview);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -54,7 +57,9 @@ public class WebViewActivity extends AppCompatActivity {
 
         progressBar = ProgressDialog.show(this, "", "Loading...");
 
-        WebviewPresenter.setupWebView(url, isPdf, webView, progressBar);
+        progressBar.setCancelable(isCancelAble);
+
+        WebviewPresenter.setupWebView(url, isPdf, webView, progressBar, isProgress);
 
 
     }

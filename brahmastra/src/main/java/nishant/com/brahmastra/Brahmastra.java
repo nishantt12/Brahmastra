@@ -41,13 +41,15 @@ public class Brahmastra {
 
     }
 
-    public static void openPdfFragment(int layoutId, AppCompatActivity context, String url) {
+    public static void openPdfFragment(int layoutId, AppCompatActivity context, String url, boolean isProgress, boolean isCancelAble) {
         Log.e("d", url);
 
         Bundle bundle = new Bundle();
 
         bundle.putString("url", url);
         bundle.putBoolean("isPdf", true);
+        bundle.putBoolean("isCancelAble", isCancelAble);
+        bundle.putBoolean("isProgress", isProgress);
 
 
         ManageFragments manageFragments = new ManageFragments();

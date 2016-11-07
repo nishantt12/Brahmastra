@@ -34,14 +34,16 @@ public class WebviewFragment extends Fragment {
         String url = bundle.getString("url");
 //        String title = bundle.getString("title");
         boolean isPdf = bundle.getBoolean("isPdf", false);
+        boolean isProgress = bundle.getBoolean("isProgress", false);
+        boolean isCancelAble = bundle.getBoolean("isCancelAble", false);
 
         WebView webView = (WebView) view.findViewById(R.id.webview);
 
-
         ProgressDialog progressBar = ProgressDialog.show(context, "", "Loading...");
 
-        WebviewPresenter.setupWebView(url, isPdf, webView, progressBar);
+        progressBar.setCancelable(isCancelAble);
 
+        WebviewPresenter.setupWebView(url, isPdf, webView, progressBar, isProgress);
 
     }
 

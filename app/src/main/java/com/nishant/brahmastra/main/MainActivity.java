@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        Brahmastra.openPdf(this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf", "Testing");
 
-        Brahmastra.openPdfFragment(R.id.frame_layout, this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf");
+        Brahmastra.openPdfFragment(R.id.frame_layout, this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf", true, true);
+
 
 
     }

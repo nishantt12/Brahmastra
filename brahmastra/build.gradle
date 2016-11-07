@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/nishantt12/Brahmastra'
     gitUrl = 'https://github.com/nishantt12/Brahmastra.git'
 
-    libraryVersion = '1.2.5'
+    libraryVersion = '1.2.6'
 
     developerId = 'nishantt12'
     developerName = 'Nishant Tanwar'
@@ -48,6 +48,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'org.ocpsoft.prettytime:prettytime:3.2.0.Final'
+}
+
+subprojects {
+    tasks.withType(Javadoc).all { enabled = false }
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
