@@ -39,6 +39,8 @@ public class WebviewFragment extends Fragment {
 
         WebView webView = (WebView) view.findViewById(R.id.webview);
 
+        webView.getSettings().setTextZoom(200);
+
         ProgressDialog progressBar = ProgressDialog.show(context, "", "Loading...");
 
         progressBar.setCancelable(isCancelAble);

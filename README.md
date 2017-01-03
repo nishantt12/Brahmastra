@@ -24,7 +24,7 @@ The simplest way to use SpicyAlertDialog is to add the library as aar dependency
 
 ## Usage
 
-      Brahmastra.openPdf(this, "http://favouritetable.com/uploads/menu/635876883017774818.pdf", "Testing");
+      Brahmastra.openPdf(this, "Your_pdf_url", "Testing");
 
 
 
